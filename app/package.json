@@ -2,6 +2,11 @@
   "private": true,
   "name": "electron-nextjs-ts-scaffold",
   "description": "A simple nextjs electron typescript scaffold",
+  "author": {
+    "name": "Benedikt Kaiser",
+    "email": "benediktkaiser8@gmail.com",
+    "url": "https://github.com/benediktkaiser"
+  },
   "version": "1.0.0",
   "main": "app/background.js",
   "scripts": {
