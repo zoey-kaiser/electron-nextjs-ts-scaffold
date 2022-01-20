@@ -27,7 +27,7 @@ steps:
     depends_on: [install]
     commands:
       - cd app
-      - tsc
+      - yarn type-check
 
 ---
 kind: pipeline
@@ -59,4 +59,4 @@ steps:
     depends_on: [install]
     commands:
       - cd app
-      - tsc
+      - yarn type-check
