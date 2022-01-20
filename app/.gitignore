@@ -1,0 +1,10 @@
+# electron
+node_modules
+*.log
+.next
+app
+dist
+
+# IDEs
+.idea
+.vscode

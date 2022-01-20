@@ -1,0 +1,12 @@
+appId: com.example.electron
+productName: electron-nextjs-ts-scaffold
+copyright: Copyright © 2022
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null

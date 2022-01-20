@@ -1,0 +1,62 @@
+kind: pipeline
+name: lint-typecheck
+type: docker
+
+trigger:
+  event:
+    - pull_request
+  branch:
+    - main
+
+steps:
+  - name: install
+    image: node:16.9.1
+    commands:
+      - cd app
+      - yarn install
+
+  - name: lint
+    image: node:16.9.1
+    depends_on: [install]
+    commands:
+      - cd app
+      - yarn lint
+
+  - name: typescript-check
+    image: node:16.9.1
+    depends_on: [install]
+    commands:
+      - cd app
+      - yarn type-check
+
+---
+kind: pipeline
+name: lint-typecheck
+type: docker
+
+trigger:
+  event:
+    - push
+  branch:
+    - main
+
+steps:
+  - name: install
+    image: node:16.9.1
+    commands:
+      - cd app
+      - yarn install
+
+  - name: lint
+    image: node:16.9.1
+    depends_on: [install]
+    commands:
+      - cd app
+      - yarn lint
+
+  - name: typescript-check
+    image: node:16.9.1
+    depends_on: [install]
+    commands:
+      - cd app
+      - yarn type-check
