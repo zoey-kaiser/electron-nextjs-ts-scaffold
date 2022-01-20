@@ -1,10 +1,15 @@
 module.exports = {
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './layout/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
-    extend: {},
+    extend: {
+    }
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
+  ],
+}
